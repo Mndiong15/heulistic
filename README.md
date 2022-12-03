@@ -6,4 +6,4 @@ Our software makes content research faster by getting insight from thousands of 
 
 **HERE'S THE SECRET**
 
-Connecting content data from sources like websites and social media will enable our client to craft better marketing messages that are more relevant to consumers' current needs
+Connecting content data from sources like websites and social media will enable our client to craft better marketing messages that are more relevant to consumers' current needs.
