@@ -1,4 +1,4 @@
-**Heulistic AI**
+**HEULISTIC AI**
 
 We are a tech startup that aims to deliver artificial intelligence and automation solutions in marketing to businesses and content creators everywhere.
 
