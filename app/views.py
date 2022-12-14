@@ -6,4 +6,4 @@ from django.http import HttpResponse
 # request handler for actions
 
 def say_hello(request):
-    return render(request, 'hello.html', {'title': 'Bienvenue'} )
+    return render(request, 'index.html')
