@@ -129,3 +129,17 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+
+
+# AWS Credentials for access
+
+AWS_ACCESS_KEY_ID = "AKIAVO6DXTXPKPQHJ463"
+
+AWS_SECRET_ACCESS_KEY = "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"
+
+AWS_STORAGE_BUCKET_NAME = "heulistic-content-img-vids"
+
+AWS_QUERYSTRING_AUTH = False

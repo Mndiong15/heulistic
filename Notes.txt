@@ -1,0 +1,5 @@
+To run virtual environment
+pipenv shell
+
+Use VSCode python interpreter
+View > Command Palette > python interpreter > select virtual environment name

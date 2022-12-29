@@ -1,34 +1,55 @@
 import logo from "./logo.svg";
 import "./App.css";
 
+import React from 'react'
+
 function App() {
   return (
-      <body>
-        <nav>
-          <div id="navdiv">
-            <a href="#" class="c">About</a>
-            <a href='#' class="c">Contact</a>
-            <div><button type="submit" name="button">Sign In</button></div>
+    <body>
+      <nav>
+        <div id="navdiv">
+          <a href="#" class="c">
+            About
+          </a>
+          <a href="#" class="c">
+            Contact
+          </a>
+          <div>
+            <button type="submit" name="button">
+              Sign In
+            </button>
           </div>
-        </nav>
-        <main>
-          <center>
-            <img src="heulisticlogo.png" alt="logo" width="20%" height="5%" id="heulisticlogo"></img>
+        </div>
+      </nav>
+      <main>
+        <center>
+          <img
+            src="logo.svg"
+            alt="logo"
+            width="20%"
+            height="5%"
+            id="heulisticlogo"
+          ></img>
+          <h1>Heulistic AI</h1>
+          <div>
+            <div id="maindiv">
+              <span>
+                <input id="inputspan" type="text" name="search"></input>
+              </span>
+            </div>
+          </div>
+          <section>
             <div>
-              <div id="maindiv">
-                <span id="inputspan"><input type="text" name="search"></input></span>
-              </div>
+              <button type="submit">Submit</button>
             </div>
-            <section>
-              <div><button type="submit">Submit</button></div>
-            </section>
-            <div><p>Learn your audience in minutes</p></div>
-            <div id="Bottomdiv">
-
-            </div>
-          </center>
-        </main>
-      </body>
+          </section>
+          <div>
+            <p>Learn your audience in minutes</p>
+          </div>
+          <div id="Bottomdiv"></div>
+        </center>
+      </main>
+    </body>
   );
 }
 
