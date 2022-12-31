@@ -143,3 +143,6 @@ AWS_SECRET_ACCESS_KEY = "U4xU0p8pkTaTUVph2BcuXetWQ/ef9tjqgSCIW1W8"
 AWS_STORAGE_BUCKET_NAME = "heulistic-content-img-vids"
 
 AWS_QUERYSTRING_AUTH = False
+
+# Google API Key
+GOOGLE_API_KEY = "AIzaSyCfFf984vGmELGWgX-M3mYNMr7m9abI_ks"
