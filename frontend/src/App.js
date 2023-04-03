@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import SocialMediaSelector from './Checkbox';
 
 import React from "react";
 
@@ -38,6 +39,7 @@ function App() {
               </span>
             </div>
           </div>
+          <div><SocialMediaSelector /></div>
           <section>
             <div>
               <button type="submit">Submit</button>
@@ -54,3 +56,4 @@ function App() {
 }
 
 export default App;
+ReactDOM.render(<App />, document.getElementById('root'));

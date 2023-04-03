@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 const platforms = [
   { name: 'YouTube', icon: 'youtube' },
@@ -46,4 +48,5 @@ const SocialMediaSelector = () => {
   );
 };
 
-export default Social
+ReactDOM.render(<App />, document.getElementById('root'));
+export default SocialMediaSelector;
