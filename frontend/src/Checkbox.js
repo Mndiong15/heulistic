@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import React from 'react';
+import { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 const platforms = [
@@ -48,5 +48,4 @@ const SocialMediaSelector = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
 export default SocialMediaSelector;

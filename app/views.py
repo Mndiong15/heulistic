@@ -7,3 +7,6 @@ from django.http import HttpResponse
 
 def say_hello(request):
     return render(request, 'index.html')
+
+def aboutUs(request):
+    return render(request, 'About.js')

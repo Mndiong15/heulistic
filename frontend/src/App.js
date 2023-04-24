@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import SocialMediaSelector from './Checkbox';
+import SocialMediaSelector from "./Checkbox";
 
 import React from "react";
 
@@ -25,7 +25,7 @@ function App() {
       <main>
         <center>
           <img
-            src="logo.svg"
+            src="{require('logo-no-background.png')}"
             alt="logo"
             width="20%"
             height="5%"
@@ -39,12 +39,12 @@ function App() {
               </span>
             </div>
           </div>
-          <div><SocialMediaSelector /></div>
-          <section>
-            <div>
-              <button type="submit">Submit</button>
-            </div>
-          </section>
+          <div>
+            <SocialMediaSelector />
+          </div>
+          <div>
+            <button type="submit">Submit</button>
+          </div>
           <div>
             <p>Learn your audience in minutes</p>
           </div>
@@ -55,5 +55,4 @@ function App() {
   );
 }
 
-export default App;
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
