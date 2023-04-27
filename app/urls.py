@@ -4,6 +4,6 @@ from . import views
 
 # URL Configuration
 urlpatterns = [
-    path('', TemplateView.as_view(template_name="index.html"))
-    path('About Us/', TemplateView.as_view(template_name="About.js"))
+    path('', TemplateView.as_view(template_name="index.html")),
+    path('about/', views.about, name='about')
 ]

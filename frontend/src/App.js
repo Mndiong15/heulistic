@@ -1,58 +1,32 @@
-import logo from "./logo.svg";
-import "./App.css";
-import SocialMediaSelector from "./Checkbox";
-
-import React from "react";
+import React from 'react';
+import './App.css';
 
 function App() {
   return (
-    <body>
-      <nav>
-        <div id="navdiv">
-          <a href="#" class="c">
-            About
-          </a>
-          <a href="#" class="c">
-            Contact
-          </a>
-          <div>
-            <button type="submit" name="button">
-              Sign In
-            </button>
-          </div>
-        </div>
+    <div className="heulistic-home-page">
+      <nav className="heulistic-nav">
+        <a href="#">Pricing</a>
+        <button className="heulistic-apps-button">Login</button>
+        <img
+          className="heulistic-logo"
+          src=""
+          alt="Heulistic"
+        />
+        <button className="heulistic-account-button">Sign up</button>
       </nav>
-      <main>
-        <center>
-          <img
-            src="{require('logo-no-background.png')}"
-            alt="logo"
-            width="20%"
-            height="5%"
-            id="heulisticlogo"
-          ></img>
-          <h1>Heulistic AI</h1>
-          <div>
-            <div id="maindiv">
-              <span>
-                <input id="inputspan" type="text" name="search"></input>
-              </span>
-            </div>
-          </div>
-          <div>
-            <SocialMediaSelector />
-          </div>
-          <div>
-            <button type="submit">Submit</button>
-          </div>
-          <div>
-            <p>Learn your audience in minutes</p>
-          </div>
-          <div id="Bottomdiv"></div>
-        </center>
-      </main>
-    </body>
+      <form className="heulistic-search-form">
+        <input
+          className="heulistic-search-input"
+          type="text"
+          name="q"
+          placeholder="Men's Fashion"
+        />
+        <button className="heulistic-search-button" type="submit">
+          Search
+        </button>
+      </form>
+    </div>
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+export default App;
