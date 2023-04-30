@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Stripe from "stripe";
+import Stripe from '@stripe/react-stripe-js';
 
-const stripe = new Stripe("YOUR_STRIPE_PUBLIC_KEY");
+var STRIPE_PUBLISHABLE_KEY_TEST = 'pk_test_51N1APUASZB5G51LqlRpNSm745a9l7ltCN67KjbmNuxtO9NCQNOgyvmT7wH5Kn9g5aeBPfEh1voZhvv5wJmidyFZW000CBSsgTv'
+const stripe = new Stripe(STRIPE_PUBLISHABLE_KEY_TEST);
 
 const SubscriptionForm = () => {
   const [plans, setPlans] = useState([]);

@@ -1,31 +1,22 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import About from './components/About';
+import HeulisticHomePage from './components/HeulisticHomePage';
+import Pricing from './components/Pricing';
 
 function App() {
   return (
-    <div className="heulistic-home-page">
-      <nav className="heulistic-nav">
-        <a href="#">Pricing</a>
-        <button className="heulistic-apps-button">Login</button>
-        <img
-          className="heulistic-logo"
-          src=""
-          alt="Heulistic"
-        />
-        <button className="heulistic-account-button">Sign up</button>
-      </nav>
-      <form className="heulistic-search-form">
-        <input
-          className="heulistic-search-input"
-          type="text"
-          name="q"
-          placeholder="Men's Fashion"
-        />
-        <button className="heulistic-search-button" type="submit">
-          Search
-        </button>
-      </form>
-    </div>
+    <Router>
+        <Route exact path="/">
+          <HeulisticHomePage />
+        </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
+        <Route exact path="/pricing">
+          <Pricing />
+        </Route>
+    </Router>
   );
 }
 
