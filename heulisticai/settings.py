@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import os
 from pathlib import Path
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
-    'frontend'
+    'corsheaders',
+    'frontend',
+    'rest_framework',
+    'rest_framework_simplejwt.token_blacklist'
 ]
 
 MIDDLEWARE = [
@@ -49,10 +53,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'heulisticai.urls'
-
+CORS_ORIGIN_ALLOW_ALL = True
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -73,6 +78,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'heulisticai.wsgi.application'
 
+SIMPLE_JWT = {
+     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=10),
+     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+     'ROTATE_REFRESH_TOKENS': True,
+     'BLACKLIST_AFTER_ROTATION': True
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -133,7 +144,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 #STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
 
-
 # AWS Credentials for access
 
 AWS_ACCESS_KEY_ID = "AKIAVO6DXTXPKPQHJ463"
@@ -168,3 +178,15 @@ STRIPE_PLAN_ID_BUSINESS_TEST = 'price_1N1dn0ASZB5G51LqKxFmVCX3'
 STRIPE_PLAN_ID_PRO = 'price_1N1MJKASZB5G51LqnJY0W75X'
 STRIPE_PLAN_ID_INDIE = 'price_1N1MKYASZB5G51LqFXSNniie'
 STRIPE_PLAN_ID_BUSINESS = 'price_1N1dm9ASZB5G51Lq9koi3ptr'
+
+# instagram keys
+INSTAGRAM_APP_ID = ''
+INSTAGRAM_APP_SECRET = '1159474198062194|exAz0nhMGPxIyXiSmuJGTOv7e3c'
+INSTAGRAM_ACCESS_TOKEN = 'EAAQeiRZBzpHIBAC8T7ZBpmcCpg3wxk7jHWNkP0NzCJf0LAuSGM27YtZCN3vY9mYnDobjP4fafcSGMs51dYQ0WPf3YrMLhzc6VTqQPXfn31ooFRRMaLRGJXv9AXMlHzbHeHu3tOeMGvYnRKftUu56hZCEKGyxQYnsJvAaQdo4TapkOPZCZCw7jZAjHgHSmeKRGZCAsoLSCXstH3hm3TJewAZAq5W7QC3kxYnlqdOKB13oS38cgmfec7DnFCLCpEkKRjBRMLNkZCLhshGQZDZD'
+
+# twitter keys
+TWITTER_API_KEY = 'HUfmBKZXIftqQyqb1f2cMLwiV'
+TWITTER_API_KEY_SECRET = 'xMa5ue9KZ1YJMsmlGsdgwxAeLDXcUfOfajj5pr3J7arlEqrmtz'
+TWITTER_ACCESS_TOKEN = '2931998159-AsnFga8NceKFJZmyLdAzEr41sZtXIveqogZSimF'
+TWITTER_ACCESS_TOKEN_SECRET = 'QJH0rAvE1dhN7fGZio9Qs3syAUiIidoe6S0HkkuAajfPY'
+TWITTER_BEARER_TOKEN = 'AAAAAAAAAAAAAAAAAAAAAEPSjQEAAAAA9mAd7%2BhQw5oIWVXdHpRTRNYrEmU%3DyRifWgZnOwimROCQIZQy3hLDu7L7O6sRRzZ6KVIfOsQoVzBxdN'
